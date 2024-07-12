@@ -13,6 +13,17 @@
     </header>
     <main>
         <form id="birthday_form">
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" required>
+            <br>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+            <button type="submit">Submit</button>
         </form>
         <div id="result"></div>
     </main>
