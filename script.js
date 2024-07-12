@@ -1,22 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     const form = document.getElementById('birthday_form');
+
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         const birthdate = new Date(document.getElementById('birthday').value);
         let gender = document.getElementById('gender').value;
         const dayOfWeek = birthdate.getDay(); 
-        console.log("day of the week"+dayOfWeek)
         let akanName;
-       if(gender == "select")
-       {
-        alert("Please Select Gender ");
-       }
-       else if (gender === 'male') {
-        akanName = akanMaleName(dayOfWeek);
+        if(gender == "select"){
+        
+            alert("Please Select Gender ");
+
+        }else if (gender === 'male') {
+
+            akanName = akanMaleName(dayOfWeek);
+
         } else {
-        akanName = akanFemaleName(dayOfWeek);
-    }
-    finalResult(akanName,gender,dayOfWeek);
+
+            akanName = akanFemaleName(dayOfWeek);
+        }
+
+        finalResult(akanName,gender,dayOfWeek);
 
     });
 });
